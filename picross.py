@@ -214,8 +214,8 @@ def get_rid_of_bad_possibilities(line, possibilities):
 
 class Picross:
     def __init__(self, n, row_clues, col_clues):
-        self.n = n
         assert len(row_clues) == len(col_clues) == n
+        self.n = len(row_clues)
         self.array = [[0 for i in range(n)] for i in range(n)]
         self.row_clues = row_clues
         self.col_clues = col_clues
